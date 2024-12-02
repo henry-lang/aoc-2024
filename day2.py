@@ -17,7 +17,6 @@ def part_b(input: str):
 
     for l in data:
         delta = [l[i] - l[i-1] for i in range(len(l) - 1, 0, -1)]
-        print(delta)
         safe = ((all(s < 0 for s in delta) or all(s > 0 for s in delta))) and all(1 <= abs(s) <= 3 for s in delta)
         for i in range(len(l)):
             l_copy = l.copy()
