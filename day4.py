@@ -28,17 +28,14 @@ def part_a(input: str):
     
     count = 0
     
-    # Check rows
     for row in grid:
         count += row.count("XMAS")
         count += row.count("SAMX")
     
-    # Check columns 
     for col in transposed:
         count += col.count("XMAS")
         count += col.count("SAMX")
         
-    # Check diagonals
     for diag in diagonals:
         count += diag.count("XMAS")
         count += diag.count("SAMX")
